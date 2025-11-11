@@ -9,6 +9,13 @@ The analysis focuses on *Length of Stay (LOS)* and *Cost per Discharge* as the m
 ---
 
 
+## 📊 Dataset Overview
+- Number of rows : 26594
+- Number of columns: 30
+- Data Source: Datacamp
+
+
+
 ## 🧹 Data Cleaning (Power Query)
 - Removed duplicates  
 - Standardized data types (numeric, categorical, date)
@@ -39,15 +46,6 @@ The following DAX measures were created to calculate hospital efficiency indicat
 ---
 
 
-# 🏥 Hospital Efficiency Analysis — Insights & Recommendations
-
-## 🎯 Objective
-
-The goal of this analysis is to identify insights that highlight opportunities to improve hospital efficiency.  
-Efficiency here means minimizing **waste** in time, cost, and resources — including equipment, supplies, and staff efforts.  
-The analysis focuses on **Length of Stay (LOS)** and **Cost per Discharge** as the main performance indicators.
-
----
 
 ## 💡 Actionable Insights Extracted from the Data
 
@@ -176,3 +174,9 @@ The **Hospital for Special Surgery (HSS)** stands out as a **benchmark of both o
 📊 **Overall Summary:**  
 This analysis identifies operational inefficiencies, cost disparities, and best practices that can significantly enhance hospital performance.  
 By applying targeted strategies — especially digital process automation and better resource coordination — hospitals can **reduce costs without compromising patient care**.
+
+
+
+![WhatsApp Image 2025-11-11 at 10 03 54 PM](https://github.com/user-attachments/assets/e6a62d4c-6adf-4312-91b6-4e0bb810062f)
+
+
