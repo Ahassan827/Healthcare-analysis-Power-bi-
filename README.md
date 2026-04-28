@@ -6,6 +6,10 @@ The goal of this analysis is to identify insights that highlight opportunities t
 Efficiency here means minimizing *waste* in time, cost, and resources — including equipment, supplies, and staff efforts.  
 The analysis focuses on *Length of Stay (LOS)* and *Cost per Discharge* as the main performance indicators.
 
+## Business Problem:
+
+Hip replacement surgeries across the state show significant variation in cost and LOS between hospitals — but it's unclear whether this variation is driven by clinical factors, operational inefficiencies, or both.
+
 ---
 
 
@@ -49,85 +53,82 @@ The following DAX measures were created to calculate hospital efficiency indicat
 
 ## 💡 Actionable Insights Extracted from the Data
 
-### 1. Relationship Between LOS and Cost
-Hospitals with a **high average LOS** tend to have a **higher cost per discharge**, as longer stays consume more medical resources and reduce bed turnover.  
-However, some hospitals show **high LOS but low cost** (e.g., *Coney Island*, *Lincoln Medical*), suggesting that:
-- The issue may stem from **administrative delays** or **discharge coordination problems**,  
-- Rather than high medical or operational costs.
 
-**Insight:** Not all hospitals with long stays are financially inefficient — some face **administrative or coordination delays** rather than poor clinical performance.
+## 1. Relationship Between LOS and Cost
 
----
+Hospitals with high LOS tend to have higher costs. However, hospitals like Coney Island and Lincoln Medical show high LOS with low cost — suggesting the issue is administrative delays, not medical inefficiency.
 
-### 2. Severity of Illness as the Strongest LOS Driver
-Patients classified under **“Extreme Severity”** stay approximately **9 days longer** on average, and those under **“Extreme Risk of Mortality”** stay **6 days longer**.  
-This confirms that clinical severity is the **main driver** of longer hospital stays.
 
-Improving efficiency doesn’t mean forcing shorter stays — it means:
-- Managing critical cases more effectively.
-- Allocating resources (ICU beds, staff) more efficiently.
+💡 Insight: Not all hospitals with long stays are financially inefficient — some face coordination delays rather than poor clinical performance.
 
-**Insight:** Clinical severity is the dominant factor increasing LOS — hospitals should **optimize care pathways and resource use** rather than reduce stay time for critical cases.
 
----
+## 2. Severity of Illness as the Strongest LOS Driver
 
-### 3. Significant Financial Efficiency Variations
-- Overall average cost per discharge: **$21K**  
-- State Y average: **$26K**
+Extreme Severity patients stay ~9 days longer. Extreme Risk of Mortality patients stay ~6 days longer. Improving efficiency means managing critical cases better — not forcing shorter stays.
 
-This gap suggests **operational or administrative inefficiencies** between states, not only differences in patient complexity.  
-Hospitals such as **United Memorial**, **St. Mary**, and **Newark** maintain **normal LOS** with **lower costs**.
 
-**Insight:** Some hospitals achieve similar outcomes at significantly lower costs, revealing differences in **resource allocation and process efficiency**.
+💡 Insight: Clinical severity is the dominant LOS driver — hospitals should optimize care pathways and resource allocation rather than reduce stay time for critical cases.
 
----
 
-### 4. Double Waste: High LOS and High Cost
-Hospitals like **King County**, **Memorial**, and **Interfaith** show both **high LOS** and **high costs**, making them top priorities for efficiency improvement.
+## 3. Significant Financial Efficiency Variations
 
-**Insight:** Hospitals with both high LOS and cost represent **critical inefficiency zones** requiring urgent intervention.
+Overall average cost per discharge: $21K
 
----
+State Y average: $26K — a $5K gap per case
 
-### 5. Geographical Influence on Efficiency
-Urban hospitals (especially in **New York City**) have an average LOS **1.68 days longer** than other regions, indicating higher demand and slower patient turnover.  
-In contrast, non-urban regions such as **Southern Tier**, **Capital/Adirondack**, and **Central NY** demonstrate:
-- Cost reductions of **$8.5K–$9K per discharge**.  
-- Showing that **location and operational scale** affect efficiency.
+Hospitals like United Memorial, St. Mary, and Newark achieve similar outcomes at lower costs.
 
-**Insight:** Urban hospitals experience higher operational strain and slower flow, while rural hospitals achieve lower costs through **leaner systems and better resource balance**.
 
----
+💡 Insight: Some hospitals achieve similar outcomes at significantly lower costs, revealing differences in resource allocation and process efficiency.
 
-### 6. Mismatch Between Clinical and Operational Performance
-Some hospitals maintain a **short LOS (~2.4 days)** but have **low discharge volumes**, indicating operational underutilization — possibly due to limited demand or narrow specialization.
 
-**Insight:** Certain hospitals are **clinically efficient** but **operationally underused**, pointing to a need for broader service offerings or improved patient inflow management.
+## 4. Double Waste: High LOS and High Cost
+   
+Hospitals like King County, Memorial, and Interfaith show both high LOS and high costs — making them the top priority for intervention.
 
----
 
-### 7. Key Factors That Increase Cost
-Higher costs are associated with:
-- Longer LOS and complex (extreme) cases  
-- Urban location (especially NYC)  
-- Poor discharge management and patient flow  
-- Administrative inefficiencies and redundant procedures  
-- Limited automation in billing and resource tracking  
+💡 Insight: Hospitals with both high LOS and cost represent critical inefficiency zones requiring urgent action.
 
----
 
-### 8. Key Factors That Help Reduce Cost
-Hospitals that successfully control costs typically:
-- **Streamline patient discharge** through coordination with home care or rehab centers  
-- **Use digital systems** for bed management, staff scheduling, and resource tracking  
-- **Standardize clinical protocols** to reduce unnecessary variation  
-- **Monitor departmental costs** to pinpoint high-expense areas  
-- **Adopt value-based care**, focusing on outcomes instead of service volume  
-- **Negotiate better supplier contracts** and minimize procurement waste  
+## 6. Geographical Influence on Efficiency
 
-**Insight:** Cost reduction is best achieved through **process optimization and digital efficiency**, not by cutting essential care resources.
+NYC hospitals average 1.68 days longer LOS. Non-urban regions like Southern Tier and Central NY show $8.5K–$9K lower cost per discharge.
 
----
+
+💡 Insight: Urban hospitals face higher strain and slower flow, while rural hospitals achieve lower costs through leaner systems.
+
+
+## 7. Mismatch Between Clinical and Operational Performance
+
+Some hospitals have short LOS (~2.4 days) but very low discharge volumes — indicating operational underutilization.
+
+
+💡 Insight: Certain hospitals are clinically efficient but operationally underused, pointing to a need for broader services or better patient inflow management.
+
+
+## 8. Key Factors That Increase Cost
+
+- Longer LOS and extreme severity cases
+  
+- Urban location (especially NYC)
+  
+- Poor discharge management and patient flow
+  
+- Administrative inefficiencies and redundant procedures
+  
+## 9. Key Factors That Help Reduce Cost
+
+- Streamlined discharge coordination with home care and rehab centers
+  
+- Digital systems for bed management and staff scheduling
+  
+- Standardized clinical protocols
+  
+- Value-based care focused on outcomes over volume
+  
+💡 Insight: Cost reduction is best achieved through process optimization — not by cutting essential care resources.
+
+
 
 ## 🏆 Benchmark Example: Hospital for Special Surgery (HSS)
 
@@ -151,24 +152,41 @@ The **Hospital for Special Surgery (HSS)** stands out as a **benchmark of both o
 
 ## 🧭 Recommendations
 
-### 1. Operational Improvements
-- Adopt **digital discharge systems** to reduce bed occupancy delays  
-- Implement **bed management dashboards** to monitor daily turnover  
-- Share best practices from high-performing hospitals such as HSS  
+🧭 Recommendations
+## 1. Hospitals with High LOS but Low Cost (e.g., Coney Island, Lincoln Medical)
 
-### 2. Financial Optimization
-- Conduct **cost audits** in high-cost hospitals (NYU, Memorial)  
-- Apply **benchmark-based budgeting** using models from low-cost hospitals  
-- Introduce **monthly cost-per-discharge tracking**  
+- The problem is administrative — not clinical.
+ 
+ Action: Improve discharge coordination and post-surgery care planning.
 
-### 3. Clinical Process Management
-- Allocate **specialized teams** for high-severity cases to prevent LOS escalation  
-- Introduce **severity-based treatment pathways** to streamline care  
 
-### 4. Regional Strategy
-- Replicate successful **rural efficiency models** in urban hospitals  
-- Adjust **staffing and scheduling** in NYC hospitals to match demand peaks  
 
+## 2. Hospitals with High LOS and High Cost (e.g., King County, Memorial, Interfaith)
+
+- These are the highest priority — double waste of time and money.
+  
+  Action: Start with a cost audit and apply the HSS operational model.
+
+
+## 3. NYC Hospitals
+
+- The problem is operational strain — not poor clinical performance.
+   
+  Action: Increase staffing during peak hours and optimize surgery scheduling.
+
+
+## 4. Hospitals with Short LOS but Low Discharge Volumes
+   
+- Clinical efficiency exists — but it's not converting into real output.
+  
+  Action: Expand service offerings or improve patient inflow management.
+
+
+## 5. State-wide
+
+- HSS is the benchmark — clear specialization, strong discharge coordination, below-average cost.
+  
+  Action: Share HSS best practices across underperforming hospitals.
 ---
 
 📊 **Overall Summary:**  
